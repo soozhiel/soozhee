@@ -34,19 +34,13 @@ async function sendCallingCard(card: CallingCard) {
 }
 
 const movements = [
-  { kind: 'declaration', lines: ['I don’t have all the answers.'] },
-  { kind: 'pair', lines: ['I do have the willingness — and occasionally the audacity — to ask the simple, stupid question everyone else would rather bury than risk looking stupid.', 'I’m comfortable being called crazy while something is still unknown — or still operating in my blind spot.'] },
-  { kind: 'statement gold', lines: ['I’m comfortable creating from the unknown when there’s a problem worth solving.'] },
-  { kind: 'beats', lines: ['I’ll back what I believe.', 'And I’ll back the people who helped me get here.', 'I’ll also admit I got it wrong when reality finally proves that I did.'] },
-  { kind: 'declaration italic', lines: ['Then I’ll dig myself out of my own grave.'] },
+  { kind: 'opening', lines: ['I don’t have all the answers.', 'I do have the willingness — and occasionally the audacity — to ask the simple, stupid question everyone else would rather bury than risk looking stupid.', 'I’m comfortable being called crazy while something is still unknown — or still operating in my blind spot.'] },
+  { kind: 'conviction', lines: ['I’m comfortable creating from the unknown when there’s a problem worth solving.', 'I’ll back what I believe.', 'And I’ll back the people who helped me get here.', 'I’ll also admit I got it wrong when reality finally proves that I did.', 'Then I’ll dig myself out of my own grave.'] },
   { kind: 'pair', lines: ['There is nothing particularly glamorous about the amount of work I’ve done killing my own bad ideas, assumptions, fears and bullshit.', 'But it has paid for a rather glamorous freedom:'] },
   { kind: 'litany', lines: ['I don’t need to protect them.', 'I can sit with something uncomfortable without needing to make it comfortable.', 'I can admit the truth when the truth is inconvenient.', 'I can talk about the thing nobody quite wants to notice yet.', 'I can ask the question that might make both of us look stupid.', 'I can change my mind without treating it as a personal catastrophe.', 'And I can keep looking when the first answer doesn’t work.'] },
-  { kind: 'pair narrow', lines: ['A lot of what I’ve created came from doing exactly that.', 'A lot of it also came from becoming interested in studying things that make otherwise good foundations crack under pressure.'] },
-  { kind: 'fractures', lines: ['The thing nobody accounted for.', 'The assumption nobody checked.', 'The uncomfortable bit everyone worked around.', 'The small crack that didn’t look important until everything resting on it got heavier.'] },
-  { kind: 'beats small', lines: ['Some things I’ve made worked.', 'Some didn’t.', 'Some became something I couldn’t have imagined when I started.'] },
-  { kind: 'declaration gold', lines: ['That’s the point.'] },
-  { kind: 'pair conclusion', lines: ['I’m not asking you to trust that I know everything.', 'I’m giving you a way to decide whether you could sit across from me, put the real problem on the table, and think out loud without performing.'] },
-  { kind: 'finale', lines: ['If you can —', 'we’ll probably have a proper conversation.'] },
+  { kind: 'foundations', lines: ['A lot of what I’ve created came from doing exactly that.', 'A lot of it also came from becoming interested in studying things that make otherwise good foundations crack under pressure.', 'The thing nobody accounted for.', 'The assumption nobody checked.', 'The uncomfortable bit everyone worked around.', 'The small crack that didn’t look important until everything resting on it got heavier.'] },
+  { kind: 'outcomes', lines: ['Some things I’ve made worked.', 'Some didn’t.', 'Some became something I couldn’t have imagined when I started.', 'That’s the point.'] },
+  { kind: 'conclusion', lines: ['I’m not asking you to trust that I know everything.', 'I’m giving you a way to decide whether you could sit across from me, put the real problem on the table, and think out loud without performing.', 'If you can —', 'we’ll probably have a proper conversation.'] },
 ];
 
 export default function Home() {

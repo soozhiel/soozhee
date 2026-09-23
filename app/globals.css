@@ -36,33 +36,39 @@ a { color: inherit; }
 .movement-inner { width: min(100%, 1000px); }
 .movement p { margin: 0; text-wrap: balance; }
 .movement p + p { margin-top: clamp(2rem, 6vh, 5rem); }
-.movement.declaration p { max-width: 15ch; margin-inline: auto; font-size: clamp(3.5rem, 9.5vw, 9rem); line-height: .94; text-align: center; }
+.movement.opening .movement-inner { max-width: 920px; }
+.movement.opening p:first-child { max-width: 15ch; font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: .94; }
+.movement.opening p:nth-child(2) { max-width: 26ch; font-size: clamp(1.8rem, 3.6vw, 3.3rem); line-height: 1.16; }
+.movement.opening p:last-child { max-width: 19ch; margin-left: auto; font-size: clamp(1.6rem, 3vw, 2.8rem); line-height: 1.2; font-style: italic; color: var(--muted); }
+.movement.conviction .movement-inner { max-width: 940px; }
+.movement.conviction p { max-width: 23ch; font-size: clamp(1.9rem, 3.7vw, 3.5rem); line-height: 1.12; }
+.movement.conviction p:first-child { max-width: 19ch; font-size: clamp(2.7rem, 5vw, 5rem); color: var(--gold); }
+.movement.conviction p:nth-child(even) { margin-left: auto; text-align: right; color: var(--muted); }
+.movement.conviction p:last-child { margin-left: auto; font-style: italic; }
 .movement.pair .movement-inner { max-width: 860px; }
 .movement.pair p { font-size: clamp(1.8rem, 4.2vw, 4rem); line-height: 1.18; }
 .movement.pair p:nth-child(2) { margin-left: auto; max-width: 17ch; font-style: italic; color: var(--muted); }
-.movement.statement p { max-width: 18ch; margin-inline: auto; font-size: clamp(3rem, 7.4vw, 7.5rem); line-height: 1; text-align: center; }
-.movement.gold p { color: var(--gold); }
-.movement.italic p { font-style: italic; }
-.movement.beats .movement-inner { max-width: 940px; }
-.movement.beats p { max-width: 20ch; font-size: clamp(2rem, 5.1vw, 4.8rem); line-height: 1.05; }
-.movement.beats p:nth-child(even) { margin-left: auto; text-align: right; color: var(--muted); }
 .movement.litany { padding-block: 18vh; }
 .movement.litany .movement-inner { max-width: 880px; }
 .movement.litany p { padding: 8vh 0; font-size: clamp(2rem, 5vw, 4.7rem); line-height: 1.12; border-bottom: 1px solid rgb(214 173 104 / .14); }
 .movement.litany p:nth-child(even) { margin-left: auto; max-width: 17ch; font-style: italic; color: var(--muted); }
-.movement.narrow .movement-inner { max-width: 760px; }
-.movement.fractures { min-height: 135svh; }
-.movement.fractures .movement-inner { max-width: 900px; }
-.movement.fractures p { padding: clamp(3.5rem, 10vh, 8rem) 0; font-size: clamp(2.4rem, 6.3vw, 6rem); line-height: 1; }
-.movement.fractures p:nth-child(2) { margin-left: 12%; color: var(--muted); }
-.movement.fractures p:nth-child(3) { margin-left: 25%; font-style: italic; }
-.movement.fractures p:nth-child(4) { max-width: 15ch; margin-left: auto; color: var(--gold); }
-.movement.small p { font-size: clamp(1.8rem, 4.2vw, 3.8rem); }
+.movement.foundations { padding-block: 18vh; }
+.movement.foundations .movement-inner { max-width: 900px; }
+.movement.foundations p { max-width: 26ch; font-size: clamp(1.8rem, 3.8vw, 3.5rem); line-height: 1.16; }
+.movement.foundations p:nth-child(n+3) { padding-top: clamp(2.5rem, 7vh, 6rem); font-size: clamp(2.2rem, 5vw, 4.8rem); line-height: 1; }
+.movement.foundations p:nth-child(4) { margin-left: 12%; color: var(--muted); }
+.movement.foundations p:nth-child(5) { margin-left: 22%; font-style: italic; }
+.movement.foundations p:last-child { max-width: 17ch; margin-left: auto; color: var(--gold); }
+.movement.outcomes .movement-inner { max-width: 900px; }
+.movement.outcomes p { max-width: 22ch; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.08; }
+.movement.outcomes p:nth-child(even) { margin-left: auto; color: var(--muted); }
+.movement.outcomes p:last-child { max-width: none; font-size: clamp(3.5rem, 8vw, 7.5rem); color: var(--gold); }
+.movement.conclusion { min-height: 120svh; }
 .movement.conclusion .movement-inner { max-width: 960px; }
-.movement.conclusion p:last-child { max-width: 22ch; font-size: clamp(2.2rem, 5.2vw, 5rem); color: var(--cream); }
-.movement.finale { min-height: 100svh; }
-.movement.finale p:first-child { font-family: var(--sans); font-size: clamp(.7rem, 1.3vw, .95rem); letter-spacing: .4em; color: var(--gold); }
-.movement.finale p:last-child { max-width: 13ch; font-size: clamp(3.8rem, 10vw, 9rem); line-height: .9; }
+.movement.conclusion p { max-width: 24ch; font-size: clamp(1.9rem, 4vw, 3.7rem); line-height: 1.15; }
+.movement.conclusion p:nth-child(2) { margin-left: auto; }
+.movement.conclusion p:nth-child(3) { margin-top: 18vh; font-family: var(--sans); font-size: clamp(.7rem, 1.3vw, .95rem); letter-spacing: .4em; color: var(--gold); }
+.movement.conclusion p:last-child { max-width: 13ch; font-size: clamp(3.8rem, 9vw, 8.5rem); line-height: .9; }
 
 .invitation { min-height: 76svh; display: grid; place-items: center; padding: 14vh 8vw; border-top: 1px solid rgb(214 173 104 / .12); }
 .invitation p { max-width: 16ch; margin: 0; font-family: var(--sans); font-size: clamp(2.5rem, 7vw, 6.5rem); font-weight: 200; letter-spacing: .08em; line-height: 1.04; text-align: center; }
@@ -111,9 +117,11 @@ a { color: inherit; }
   .poster-greeting p { font-size: 1rem; }
   .poster-greeting span { font-size: .56rem; }
   .movement { min-height: 92svh; padding: 18vh 7vw; }
+  .movement.opening p:nth-child(2), .movement.opening p:last-child { font-size: clamp(1.7rem, 7vw, 2.7rem); }
+  .movement.conviction p { font-size: clamp(1.8rem, 7vw, 2.8rem); }
   .movement.pair p { font-size: clamp(1.9rem, 8vw, 3.2rem); }
   .movement.litany p { padding-block: 10vh; }
-  .movement.fractures p:nth-child(n) { margin-left: 0; }
+  .movement.foundations p:nth-child(n) { margin-left: 0; }
   .calling-card { width: calc(100% - 12vw); }
   .calling-card header { margin-bottom: 12vh; }
   .calling-card h2 { line-height: .88; }
