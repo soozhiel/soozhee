@@ -116,12 +116,23 @@ a { color: inherit; }
   .poster-greeting h2 { font-size: 1.18rem; letter-spacing: .2em; }
   .poster-greeting p { font-size: 1rem; }
   .poster-greeting span { font-size: .56rem; }
-  .movement { min-height: 92svh; padding: 18vh 7vw; }
-  .movement.opening p:nth-child(2), .movement.opening p:last-child { font-size: clamp(1.7rem, 7vw, 2.7rem); }
-  .movement.conviction p { font-size: clamp(1.8rem, 7vw, 2.8rem); }
-  .movement.pair p { font-size: clamp(1.9rem, 8vw, 3.2rem); }
-  .movement.litany p { padding-block: 10vh; }
+  .movement { min-height: auto; padding: 13vh 7vw; }
+  .movement p + p { margin-top: clamp(1.75rem, 6vh, 3.25rem); }
+  .movement.opening p:first-child { font-size: clamp(2.25rem, 10vw, 3rem); line-height: 1; }
+  .movement.opening p:nth-child(2), .movement.opening p:last-child,
+  .movement.conviction p, .movement.pair p,
+  .movement.foundations p, .movement.outcomes p,
+  .movement.conclusion p { font-size: clamp(1.3rem, 5.5vw, 1.65rem); line-height: 1.32; }
+  .movement.conviction p:first-child,
+  .movement.foundations p:nth-child(n+3),
+  .movement.outcomes p:last-child { font-size: clamp(1.65rem, 7vw, 2.15rem); line-height: 1.14; }
+  .movement.litany { padding-block: 8vh; }
+  .movement.litany p { padding-block: 6vh; font-size: clamp(1.35rem, 5.8vw, 1.75rem); line-height: 1.28; }
   .movement.foundations p:nth-child(n) { margin-left: 0; }
+  .movement.foundations p:nth-child(n+3) { padding-top: 1.25rem; }
+  .movement.conclusion { min-height: auto; padding-bottom: 15vh; }
+  .movement.conclusion p:nth-child(3) { margin-top: 10vh; font-size: .68rem; line-height: 1.5; }
+  .movement.conclusion p:last-child { font-size: clamp(2.4rem, 10vw, 3.1rem); line-height: .98; }
   .calling-card { width: calc(100% - 12vw); }
   .calling-card header { margin-bottom: 12vh; }
   .calling-card h2 { line-height: .88; }
