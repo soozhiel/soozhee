@@ -1,26 +1,35 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-const projects = [
-  { name: 'DOUBLE DUMPLINGS', description: 'Independent thinking for consequential decisions.', image: '/projects/double-dumplings.png', href: 'https://doubledumplings.vercel.app' },
-  { name: 'SONIC REMEDY', description: 'Sound for clarity, focus and a more human future.', image: '/projects/sonic-remedy.png', href: 'https://sonicremedy.vercel.app' },
-  { name: 'TRANSFORMATIVE DESIGN', description: 'From insight to what exists.', image: '/projects/transformative-design.png', href: null },
-  { name: 'CAELVERUM PRO-ACTIVES™', description: 'Ideas in motion.', image: '/projects/caelverum-pro-actives.png', href: null },
-  { name: 'CAELVERUM ARCHIVES', description: 'Preserve what matters.', image: '/projects/caelverum-archives.png', href: null },
-  { name: 'CAELVERUM SONIC LABS', description: 'Research, experimentation and sonic futures.', image: '/projects/caelverum-sonic-labs.png', href: null },
-  { name: 'INLUX TREASURES', description: 'A curation of what endures.', image: '/projects/inlux-treasures.png', href: null },
-  { name: 'YUULILSHIII', description: 'Objects, expressions and worlds of their own.', image: '/projects/yuulilshiii.png', href: null },
-  { name: 'TRUTH VS FACTS', description: 'Different perspectives. A clearer view.', image: '/projects/truth-vs-facts.png', href: null },
-  { name: 'COGNITIVE CLARITY', description: 'Clearer thinking for a more complex world.', image: '/projects/cognitive-clarity.png', href: null },
-  { name: 'MUSIC SECRET SCIENCE', description: 'Exploring the interface between sound, mind and reality.', image: '/projects/music-secret-science.png', href: 'https://musicsecretscience.vercel.app' },
-  { name: 'SIMULATIONS', description: 'Real problems. Real thinking. A safer place to test what if.', image: '/projects/simulations.png', href: null },
+const works = [
+  { label: 'Double Dumplings', href: 'https://doubledumplings.vercel.app' },
+  { label: 'Sonic Remedy', href: 'https://sonicremedy.vercel.app' },
+  { label: 'Transformative Design', href: 'https://soozhee.com/transformative-design' },
+  {
+    label: 'Caelverum Pro-actives™',
+    href: 'https://caelverum-proactives.vercel.app',
+    children: [
+      { label: 'Candidates', href: 'https://caelverum-proactives.vercel.app/candidates' },
+      { label: 'Sponsors', href: 'https://caelverum-proactives.vercel.app/sponsors' },
+      { label: 'Government', href: 'https://caelverum-proactives.vercel.app/government' },
+    ],
+  },
+  { label: 'Caelverum Archives', href: 'https://caelverum-archives.vercel.app' },
+  { label: 'InLux Treasures', href: 'https://inluxtreasures.com' },
 ];
 
-function ProjectEntry({ project }: { project: (typeof projects)[number] }) {
-  const content = <><span className="project-visual"><Image src={project.image} alt="" width={420} height={420} sizes="(max-width: 720px) 29vw, 20vw" /></span><span className="project-copy"><strong>{project.name}</strong><span>{project.description}</span></span><span className="project-arrow" aria-hidden="true">→</span></>;
-  return project.href
-    ? <a className="project-entry" href={project.href} target="_blank" rel="noreferrer" aria-label={`${project.name}: ${project.description}`}>{content}</a>
-    : <div className="project-entry is-pending" aria-label={`${project.name}: link to be confirmed`}>{content}</div>;
+const thoughts = [
+  { label: 'Cognitive Clarity', href: 'https://cognitiveclarity.vercel.app' },
+  { label: 'Economic Clarity', href: 'https://economicclarity.vercel.app' },
+  { label: 'Truth VS Facts', href: 'https://truthvsfacts.vercel.app' },
+  { label: 'Music Secret Science', href: 'https://musicsecretscience.vercel.app' },
+];
+
+type IndexLink = { label: string; href: string };
+
+function DirectoryLink({ item }: { item: IndexLink }) {
+  return (
+    <a href={item.href} target="_blank" rel="noreferrer">
+      <span>{item.label}</span><span aria-hidden="true">↗</span>
+    </a>
+  );
 }
 
 export default function Home() {
@@ -33,24 +42,58 @@ export default function Home() {
         <a className="scroll-cue" href="#thought" aria-label="Continue to the thought"><span /></a>
       </section>
 
-      <section id="thought" className="thought-preview" aria-labelledby="thought-title">
-        <div className="thought-heading">
-          <p className="eyebrow">A THOUGHT</p>
-          <h2 id="thought-title">WHAT IF THE $700M DECISION ISN’T THE PROBLEM?</h2>
-          <p className="thought-question">What if the solution isn’t where you’ve decided to look for it?</p>
+      <article id="thought" className="thought" aria-labelledby="thought-title">
+        <p className="eyebrow">A THOUGHT</p>
+        <h2 id="thought-title">You know how sometimes a <span>$700M DECISION</span> can become a pretty expensive <span>PROBLEM?</span></h2>
+        <div className="thought-body">
+          <p>Alarm bells ring. Power plays trigger. Snakes and rats unite.</p>
+          <p>Consultants sing. Personnel scream. Teams are appointed.</p>
+          <p>Then come the reports, projections and recommendations.</p>
+          <p className="line-group">Expand into new markets.<br />Create another product line.<br />Build another facility.<br />Spend more on advertising.</p>
+          <p>Everyone has a solution. Yay.</p>
+          <p>And eventually, someone has to make the decision.</p>
+          <p>A lot of money, time and other people’s lives can go into getting it right.</p>
+          <p>Not everyone will share the responsibility.</p>
+          <p>So here’s the bit that interests me:</p>
+          <p className="major-question">What if everyone does their job?</p>
+          <p className="line-group">The reports are excellent.<br />The strategy is approved.<br />The money is spent.<br />The plan is executed.</p>
+          <p className="major-question">And the problem is still there?</p>
+          <p>What does that cost next?</p>
+          <p className="major-question short">Another $700m?</p>
+          <p>Or is there a hidden layer of the problem worth reaching before deciding what fixing it should actually cost?</p>
+          <p>That’s the part I tend to fixate on.</p>
+          <p>Because if everything had worked as planned, there’d be very little reason for me to be here.</p>
         </div>
-        <div className="thought-excerpt">
-          <p>It started from a place of love.</p>
-          <p>Two people deciding to have each other’s backs. Then come the inherited beliefs about what each should and shouldn’t do. The unwritten contracts neither remembers signing. The expectation that someone who loves you should somehow know what you haven’t said.</p>
-          <p>Two different histories. Different lenses. Different experiences, pains and fears.</p>
-          <p>Love can be completely genuine and still buckle under communication that can’t survive an uncomfortable truth.</p>
-          <Link className="text-link" href="/thoughts/700m-decision">READ THE THOUGHT →</Link>
+      </article>
+
+      <section className="directory" aria-label="Soozhee directory">
+        <div className="directory-column works-column">
+          <h2>WORKS</h2>
+          <ul>
+            {works.map((item) => (
+              <li key={item.label}>
+                <DirectoryLink item={item} />
+                {item.children && (
+                  <ul className="directory-children">
+                    {item.children.map((child) => <li key={child.label}><DirectoryLink item={child} /></li>)}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="directory-column">
+          <h2>THOUGHTS</h2>
+          <ul>{thoughts.map((item) => <li key={item.label}><DirectoryLink item={item} /></li>)}</ul>
         </div>
       </section>
 
-      <section className="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">WHERE SOME PROBLEMS LED.</h2>
-        <div className="project-grid">{projects.map((project) => <ProjectEntry project={project} key={project.name} />)}</div>
+      <section className="contact-strip" aria-labelledby="contact-title">
+        <h2 id="contact-title">CONTACT</h2>
+        <div className="contact-links">
+          <a href="https://www.instagram.com/soozhee/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          <a href="https://doubledumplings.vercel.app/#calling-card" target="_blank" rel="noreferrer">Double Dumplings — Leave your calling card <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
 
       <footer className="site-footer"><span>SOOZHEE</span><i aria-hidden="true" /><span>INDEPENDENT · CONFIDENTIAL · GLOBAL</span></footer>
