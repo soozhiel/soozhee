@@ -14,8 +14,8 @@ html { scroll-behavior: smooth; background: var(--ink); }
 body { margin: 0; background: var(--ink); color: var(--cream); font-family: var(--serif); }
 a { color: inherit; }
 
-.poster { position: relative; display: grid; place-items: start center; overflow: hidden; background: #030303; }
-.poster-art { display: block; width: min(100%, 1024px); height: auto; }
+.poster { position: relative; display: grid; place-items: center; min-height: 100vh; padding: 0 24px; overflow: hidden; background: #030303; }
+.poster-art { display: block; width: min(100%, 880px); height: auto; }
 .poster-scroll-link { position: absolute; top: 82%; left: 50%; width: 5rem; height: 8rem; transform: translateX(-50%); }
 .poster-scroll-link:focus-visible { outline: 1px solid var(--gold); outline-offset: .35rem; }
 
@@ -57,6 +57,9 @@ a { color: inherit; }
 .site-footer i { height: 1px; background: linear-gradient(90deg, var(--gold), rgb(214 173 104 / .15)); }
 
 @media (max-width: 720px) {
+  .poster { min-height: auto; padding: 0; }
+  .poster-art { width: 100%; }
+
   .thought { width: calc(100% - 12vw); padding-top: 5rem; }
   .eyebrow { font-size: .58rem; }
   .thought > h2 { margin: 1.5rem 0 3.8rem; font-size: clamp(2rem, 8.4vw, 2.8rem); line-height: 1.05; }
@@ -80,11 +83,6 @@ a { color: inherit; }
   .contact-links { grid-template-columns: 1fr; gap: 1.4rem; font-size: .84rem; }
   .site-footer { grid-template-columns: 1fr; gap: 1.35rem; padding: 2.5rem 6vw; text-align: center; font-size: .52rem; }
   .site-footer i { display: none; }
-}
-
-@media (min-width: 721px) {
-  .poster { min-height: 100svh; place-items: center; }
-  .poster-art { width: auto; max-width: 100%; height: 100svh; object-fit: contain; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
