@@ -36,10 +36,8 @@ export default function Home() {
   return (
     <main>
       <section className="poster" aria-label="Soozhee — pleased to meet you">
-        <div className="poster-title"><h1>SOOZHEE</h1><p>FOR THINGS WORTH THINKING ABOUT PROPERLY.</p></div>
-        <div className="horizon" aria-hidden="true"><img src="/soozhee-poster.png" alt="" /></div>
-        <div className="poster-greeting"><h2>PLEASED TO MEET YOU.</h2><p><em>Not really sure if the feeling will be mutual.</em><br /><em>Let’s try it out and see what lands with you too.</em></p><span>— SOOZHEE</span></div>
-        <a className="scroll-cue" href="#thought" aria-label="Continue to the thought"><span /></a>
+        <img className="poster-art" src="/soozhee-poster.png" alt="Soozhee — For things worth thinking about properly. Pleased to meet you." />
+        <a className="poster-scroll-link" href="#thought" aria-label="Continue to the thought" />
       </section>
 
       <article id="thought" className="thought" aria-labelledby="thought-title">

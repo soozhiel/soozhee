@@ -14,23 +14,10 @@ html { scroll-behavior: smooth; background: var(--ink); }
 body { margin: 0; background: var(--ink); color: var(--cream); font-family: var(--serif); }
 a { color: inherit; }
 
-/* The poster is intentionally unchanged. */
-.poster { position: relative; min-height: max(100svh, 760px); overflow: hidden; background: #030303; isolation: isolate; }
-.poster::after { content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: radial-gradient(circle at 50% 39%, transparent 0 23%, rgb(0 0 0 / .08) 50%, rgb(0 0 0 / .42) 100%); }
-.poster-title { position: absolute; z-index: 4; inset: clamp(3.4rem, 8svh, 7rem) 5vw auto; text-align: center; }
-.poster-title h1 { margin: 0; font-family: var(--sans); font-size: clamp(4.2rem, 16.4vw, 11.8rem); font-weight: 200; letter-spacing: .105em; line-height: .88; transform: scaleX(.84); }
-.poster-title p, .poster-greeting span { margin: clamp(1.1rem, 2.3vw, 2rem) 0 0; font-family: var(--sans); font-size: clamp(.52rem, 1.15vw, .9rem); font-weight: 300; letter-spacing: .48em; line-height: 1.7; }
-.horizon { position: absolute; z-index: 1; top: clamp(13rem, 23vw, 22rem); left: 50%; width: min(100vw, 1024px); aspect-ratio: 1024 / 500; overflow: hidden; transform: translateX(-50%); }
-.horizon img { position: absolute; width: 100%; height: auto; top: -82%; left: 0; }
-.poster-greeting { position: absolute; z-index: 4; left: 7vw; right: 7vw; top: clamp(60%, 64vw, 66%); text-align: center; }
-.poster-greeting h2 { margin: 0 0 1rem; font-size: clamp(1.35rem, 3.25vw, 2.3rem); font-weight: 400; letter-spacing: .25em; }
-.poster-greeting p { margin: 0; color: #e7e0d6; font-size: clamp(1rem, 2vw, 1.45rem); line-height: 1.65; }
-.poster-greeting span { display: inline-block; margin-top: 1.7rem; }
-.scroll-cue { position: absolute; z-index: 5; bottom: clamp(2.2rem, 6svh, 5rem); left: 50%; width: 2.6rem; height: 4.4rem; transform: translateX(-50%); }
-.scroll-cue::before { content: ''; position: absolute; left: 50%; top: .25rem; width: 1px; height: 2.7rem; background: var(--gold); }
-.scroll-cue span::before, .scroll-cue span::after { content: ''; position: absolute; bottom: .8rem; width: 1.1rem; height: 1px; background: var(--gold); }
-.scroll-cue span::before { left: .44rem; transform: rotate(45deg); }
-.scroll-cue span::after { right: .44rem; transform: rotate(-45deg); }
+.poster { position: relative; display: grid; place-items: start center; overflow: hidden; background: #030303; }
+.poster-art { display: block; width: min(100%, 1024px); height: auto; }
+.poster-scroll-link { position: absolute; top: 82%; left: 50%; width: 5rem; height: 8rem; transform: translateX(-50%); }
+.poster-scroll-link:focus-visible { outline: 1px solid var(--gold); outline-offset: .35rem; }
 
 .thought { width: min(calc(100% - 12vw), 920px); margin: 0 auto; padding: clamp(6rem, 10vw, 10rem) 0 0; }
 .eyebrow, .directory h2, .contact-strip h2 { margin: 0; font: 400 .66rem/1.4 var(--sans); letter-spacing: .5em; color: var(--gold); }
@@ -70,16 +57,6 @@ a { color: inherit; }
 .site-footer i { height: 1px; background: linear-gradient(90deg, var(--gold), rgb(214 173 104 / .15)); }
 
 @media (max-width: 720px) {
-  .poster-title { top: 4.7rem; left: -3vw; right: -3vw; }
-  .poster-title h1 { font-size: clamp(3.4rem, 17.6vw, 7rem); letter-spacing: .075em; }
-  .poster-title p { margin-inline: auto; max-width: 90%; font-size: .48rem; letter-spacing: .35em; }
-  .horizon { top: 15rem; width: 100%; aspect-ratio: 1 / .38; }
-  .horizon img { left: 0; top: -110%; }
-  .poster-greeting { top: 62%; left: 5vw; right: 5vw; }
-  .poster-greeting h2 { font-size: 1.18rem; letter-spacing: .2em; }
-  .poster-greeting p { font-size: 1rem; }
-  .poster-greeting span { font-size: .56rem; }
-
   .thought { width: calc(100% - 12vw); padding-top: 5rem; }
   .eyebrow { font-size: .58rem; }
   .thought > h2 { margin: 1.5rem 0 3.8rem; font-size: clamp(2rem, 8.4vw, 2.8rem); line-height: 1.05; }
@@ -103,6 +80,11 @@ a { color: inherit; }
   .contact-links { grid-template-columns: 1fr; gap: 1.4rem; font-size: .84rem; }
   .site-footer { grid-template-columns: 1fr; gap: 1.35rem; padding: 2.5rem 6vw; text-align: center; font-size: .52rem; }
   .site-footer i { display: none; }
+}
+
+@media (min-width: 721px) {
+  .poster { min-height: 100svh; place-items: center; }
+  .poster-art { width: auto; max-width: 100%; height: 100svh; object-fit: contain; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
