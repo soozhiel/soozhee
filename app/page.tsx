@@ -27,7 +27,7 @@ type IndexLink = { label: string; href: string };
 function DirectoryLink({ item }: { item: IndexLink }) {
   return (
     <a href={item.href} target="_blank" rel="noreferrer">
-      <span>{item.label}</span><span aria-hidden="true">↗</span>
+      <span>{item.label}</span><span aria-hidden="true">↗︎</span>
     </a>
   );
 }
@@ -89,8 +89,8 @@ export default function Home() {
       <section className="contact-strip" aria-labelledby="contact-title">
         <h2 id="contact-title">CONTACT</h2>
         <div className="contact-links">
-          <a href="https://www.instagram.com/soozhee/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-          <a href="https://doubledumplings.vercel.app/#calling-card" target="_blank" rel="noreferrer">Double Dumplings — Leave your calling card <span aria-hidden="true">↗</span></a>
+          <a href="https://www.instagram.com/soozhee/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗︎</span></a>
+          <a href="https://doubledumplings.vercel.app/#calling-card" target="_blank" rel="noreferrer">Double Dumplings — Leave your calling card <span aria-hidden="true">↗︎</span></a>
         </div>
       </section>
 
