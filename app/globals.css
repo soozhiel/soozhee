@@ -16,55 +16,8 @@ a { color: inherit; }
 
 .poster { position: relative; display: grid; place-items: center; min-height: 100vh; padding: 0 24px; overflow: hidden; background: #030303; }
 .poster-art { display: block; width: min(100%, 880px); height: auto; }
-.poster-scroll-link {
-  position: absolute;
-  top: auto;
-  bottom: clamp(1.6rem, 4.5vw, 3.2rem);
-  left: 50%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%);
-  display: inline-flex;
-  align-items: baseline;
-  gap: .55rem;
-  padding: .55rem .85rem;
-  text-decoration: none;
-  color: #e11d2e;
-  -webkit-text-fill-color: #e11d2e;
-  font: 400 .72rem/1 var(--sans);
-  letter-spacing: .42em;
-  text-transform: uppercase;
-}
-.poster-scroll-label { letter-spacing: .42em; }
-.poster-scroll-arrow {
-  position: relative;
-  display: inline-block;
-  width: 1.55rem;
-  height: 1px;
-  margin-left: .1rem;
-  background: currentColor;
-  vertical-align: middle;
-  transform: translateY(-.08em);
-}
-.poster-scroll-arrow::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: .38rem;
-  height: .38rem;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
-}
-.poster-scroll-link:hover .poster-scroll-arrow,
-.poster-scroll-link:focus-visible .poster-scroll-arrow {
-  transform: translate(.18rem, -.08em);
-}
-.poster-scroll-link:focus-visible {
-  outline: 1px solid #e11d2e;
-  outline-offset: .35rem;
-}
+.poster-scroll-link { position: absolute; top: 82%; left: 50%; width: 5rem; height: 8rem; transform: translateX(-50%); }
+.poster-scroll-link:focus-visible { outline: 1px solid var(--gold); outline-offset: .35rem; }
 
 .thought { width: min(calc(100% - 12vw), 920px); margin: 0 auto; padding: clamp(6rem, 10vw, 10rem) 0 0; }
 .eyebrow, .directory-column h2, .contact-strip h2 { margin: 0; font: 400 .66rem/1.4 var(--sans); letter-spacing: .5em; color: var(--gold); }
@@ -78,7 +31,7 @@ a { color: inherit; }
 .thought-body .major-question.short { font-size: clamp(1.85rem, 3.8vw, 3.2rem); }
 
 .directory { width: min(calc(100% - 12vw), 1120px); margin: 0 auto; padding: clamp(13rem, 24vw, 22rem) 0 clamp(5.5rem, 9vw, 8rem); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); border-bottom: 1px solid rgb(244 239 229 / .22); }
-.directory-lead { grid-column: 1 / -1; margin: 0 0 clamp(2.8rem, 5.5vw, 4.2rem); padding: 0; color: var(--cream); font: 400 clamp(24px, 2.5vw, 34px)/1.15 var(--serif); letter-spacing: .12em; text-transform: uppercase; }
+.directory-lead { grid-column: 1 / -1; margin: 0 0 clamp(1.35rem, 2.8vw, 2rem); padding: 0; color: var(--cream); font: 400 clamp(24px, 2.5vw, 34px)/1.15 var(--serif); letter-spacing: .12em; text-transform: uppercase; }
 .directory-column { min-width: 0; padding: 0 clamp(2.5rem, 7vw, 6rem); }
 .directory-column:first-child { padding-left: 0; border-right: 1px solid rgb(214 173 104 / .45); }
 .directory-column:last-child { padding-right: 0; }
@@ -109,13 +62,6 @@ a { color: inherit; }
 @media (max-width: 720px) {
   .poster { min-height: auto; padding: 0; }
   .poster-art { width: 100%; }
-  .poster-scroll-link {
-    bottom: 1.2rem;
-    font-size: .64rem;
-    gap: .45rem;
-    letter-spacing: .36em;
-  }
-  .poster-scroll-label { letter-spacing: .36em; }
 
   .thought { width: calc(100% - 12vw); padding-top: 5rem; }
   .eyebrow { font-size: .58rem; }
@@ -128,7 +74,7 @@ a { color: inherit; }
   .thought-body .major-question.short { font-size: clamp(1.7rem, 7.2vw, 2.15rem); }
 
   .directory { width: calc(100% - 12vw); padding: 10rem 0 4.5rem; grid-template-columns: 1fr; gap: 4.5rem; }
-  .directory-lead { margin-bottom: 2.6rem; letter-spacing: .1em; }
+  .directory-lead { margin-bottom: 1.5rem; letter-spacing: .1em; }
   .directory-column, .directory-column:first-child, .directory-column:last-child { padding: 0; border: 0; }
   .directory-column:first-child { padding-bottom: 4.5rem; border-bottom: 1px solid rgb(214 173 104 / .3); }
   .directory-column h2 { margin-bottom: 1.5rem; font-size: .6rem; }
