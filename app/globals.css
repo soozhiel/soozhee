@@ -31,7 +31,7 @@ a { color: inherit; }
 .thought-body .major-question { max-width: 21ch; margin: 2.3em 0 1.65em; color: var(--cream); font-size: clamp(1.6rem, 3vw, 2.5rem); font-style: italic; line-height: 1.2; }
 .thought-body .major-question.short { font-size: clamp(1.85rem, 3.8vw, 3.2rem); }
 
-.directory { width: min(calc(100% - 12vw), 1120px); margin: 0 auto; padding: clamp(13rem, 24vw, 22rem) 0 clamp(5.5rem, 9vw, 8rem); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); border-bottom: 1px solid rgb(244 239 229 / .22); }
+.directory { width: min(calc(100% - 12vw), 1120px); margin: 0 auto; padding: clamp(13rem, 24vw, 22rem) 0 clamp(5.5rem, 9vw, 8rem); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); border-top: 1px solid rgb(244 239 229 / .22); border-bottom: 1px solid rgb(244 239 229 / .22); }
 .directory-lead { grid-column: 1 / -1; margin: 0 0 clamp(1.35rem, 2.8vw, 2rem); padding: 0; color: var(--cream); font: 400 clamp(24px, 2.5vw, 34px)/1.15 var(--serif); letter-spacing: .12em; text-transform: uppercase; }
 .directory-column { min-width: 0; padding: 0 clamp(2.5rem, 7vw, 6rem); }
 .directory-column:first-child { padding-left: 0; border-right: 1px solid rgb(214 173 104 / .45); }
@@ -57,8 +57,7 @@ a { color: inherit; }
 .contact-links { display: grid; grid-template-columns: minmax(10rem, .7fr) minmax(18rem, 1.3fr); gap: 2rem; align-items: center; font-size: clamp(.82rem, 1vw, .94rem); }
 .contact-links a { width: fit-content; text-decoration: none; }
 
-.site-footer { display: grid; grid-template-columns: auto minmax(4rem, 1fr) auto; align-items: center; gap: 2.5rem; min-height: 7rem; padding: 0 5vw; font: 300 .6rem/1 var(--sans); letter-spacing: .45em; }
-.site-footer i { height: 1px; background: linear-gradient(90deg, var(--gold), rgb(214 173 104 / .15)); }
+.site-footer { display: grid; place-items: center; min-height: 7rem; padding: 0 5vw; font: 300 .6rem/1 var(--sans); letter-spacing: .45em; text-align: center; }
 
 @media (max-width: 720px) {
   .poster { min-height: auto; padding: 0; }
@@ -86,7 +85,7 @@ a { color: inherit; }
 
   .contact-strip { width: calc(100% - 12vw); padding: 3.2rem 0 4.3rem; }
   .contact-links { grid-template-columns: 1fr; gap: 1.4rem; font-size: .84rem; }
-  .site-footer { grid-template-columns: 1fr; gap: 1.35rem; padding: 2.5rem 6vw; text-align: center; font-size: .52rem; }
+  .site-footer { padding: 2.5rem 6vw; font-size: .52rem; }
   .site-footer i { display: none; }
 }
 

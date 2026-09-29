@@ -87,15 +87,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-strip" aria-labelledby="contact-title">
-        <h2 id="contact-title">CONTACT</h2>
+      <section className="contact-strip" aria-label="Contact">
         <div className="contact-links">
           <a href="https://www.instagram.com/soozhee/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗︎</span></a>
           <a href="https://doubledumplings.vercel.app/#calling-card" target="_blank" rel="noreferrer">Double Dumplings — Leave your calling card <span aria-hidden="true">↗︎</span></a>
         </div>
       </section>
 
-      <footer className="site-footer"><span>SOOZHEE</span><i aria-hidden="true" /><span>INDEPENDENT · CONFIDENTIAL · GLOBAL</span></footer>
+      <footer className="site-footer"><span>SOOZHEE</span></footer>
     </main>
   );
 }
