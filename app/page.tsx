@@ -65,8 +65,9 @@ export default function Home() {
       </article>
 
       <section className="directory" aria-label="Soozhee directory">
+        <h2 className="directory-lead">WHERE MY MIND GOES</h2>
         <div className="directory-column works-column">
-          <h2>WORKS</h2>
+          <h2>FIXATIONS</h2>
           <ul>
             {works.map((item) => (
               <li key={item.label}>
@@ -81,7 +82,7 @@ export default function Home() {
           </ul>
         </div>
         <div className="directory-column">
-          <h2>THOUGHTS</h2>
+          <h2>OBSERVATIONS</h2>
           <ul>{thoughts.map((item) => <li key={item.label}><DirectoryLink item={item} /></li>)}</ul>
         </div>
       </section>
