@@ -19,7 +19,7 @@ a { color: inherit; }
 .poster-scroll-link { position: absolute; top: 82%; left: 50%; width: 5rem; height: 8rem; transform: translateX(-50%); }
 .poster-scroll-link:focus-visible { outline: 1px solid var(--gold); outline-offset: .35rem; }
 
-.thought { width: min(calc(100% - 12vw), 920px); margin: 0 auto; padding: clamp(6rem, 10vw, 10rem) 0 0; }
+.thought { width: min(calc(100% - 12vw), 920px); margin: 0 auto; padding: clamp(6rem, 10vw, 10rem) 0 0; margin-bottom: clamp(3.5rem, 7vw, 5.5rem); }
 .eyebrow, .contact-strip h2 { margin: 0; font: 400 .66rem/1.4 var(--sans); letter-spacing: .5em; color: var(--gold); }
 .directory-column h2 { margin: 0; font: 400 clamp(.92rem, 1.25vw, 1.05rem)/1.35 var(--sans); letter-spacing: .38em; color: var(--gold); text-transform: uppercase; }
 .thought > h2 { max-width: 16ch; margin: clamp(1.8rem, 3vw, 2.8rem) 0 clamp(4.2rem, 7vw, 6.5rem); font-size: clamp(2.6rem, 5vw, 4.9rem); font-weight: 400; line-height: 1.02; letter-spacing: -.018em; text-wrap: balance; }
@@ -63,7 +63,7 @@ a { color: inherit; }
   .poster { min-height: auto; padding: 0; }
   .poster-art { width: 100%; }
 
-  .thought { width: calc(100% - 12vw); padding-top: 5rem; }
+  .thought { width: calc(100% - 12vw); padding-top: 5rem; margin-bottom: 60px; }
   .eyebrow { font-size: .58rem; }
   .thought > h2 { margin: 1.5rem 0 3.8rem; font-size: clamp(2rem, 8.4vw, 2.8rem); line-height: 1.05; }
   .thought > h2::after { margin-top: 2.5rem; }
