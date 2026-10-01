@@ -1,7 +1,7 @@
 const works = [
   { label: 'Double Dumplings', href: 'https://doubledumplings.vercel.app' },
   { label: 'Sonic Remedy', href: 'https://sonicremedy.vercel.app' },
-  { label: 'Transformative Design', href: 'https://soozhee.com/transformative-design' },
+  { label: 'Transformative Design', href: 'https://transformative-design.vercel.app' },
   {
     label: 'Caelverum Pro-actives™',
     href: 'https://caelverum-proactives.vercel.app',
