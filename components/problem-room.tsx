@@ -1,6 +1,6 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { useId, useRef, useState } from 'react';
 
 type Part = string | { beat: string };
 type Turn = { speaker: 'CEO' | 'Soozhee'; body: Part[] };
@@ -227,7 +227,7 @@ const turns: Turn[] = [
       'The question may be:',
       'Why can’t we convert the time we’ve already bought back into finished products?',
       'And I don’t know the answer.',
-      { beat: 'CEO looks at you.' },
+      { beat: 'CEO looks at Soozhee.' },
       'Where would you go next?',
     ],
   },
@@ -298,8 +298,8 @@ const turns: Turn[] = [
       'But:',
       '‘Before you expand anything, dissect the choke point that’s finally become visible under load.’',
       'Because if some portion of that constraint can be removed by changing how work flows through finishing and onward to completion, the amount of new physical capacity we actually need could be very different.',
-      { beat: 'CEO looks at you.' },
-      'And I suspect you’re not ready to let me spend my $180 million yet. 😂',
+      { beat: 'CEO looks at Soozhee.' },
+      'And I suspect you’re not ready to let me spend my $180 million yet.',
     ],
   },
   {
@@ -311,9 +311,15 @@ const turns: Turn[] = [
 export function ProblemRoom() {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const roomRef = useRef<HTMLElement>(null);
+
+  function closeFromEnd() {
+    setOpen(false);
+    roomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   return (
-    <section className="problem-room" aria-label="Problem room access">
+    <section ref={roomRef} className="problem-room" aria-label="Problem room access">
       <button
         type="button"
         className="problem-room-toggle"
@@ -392,7 +398,12 @@ export function ProblemRoom() {
                 </div>
               ))}
             </div>
-            <p className="problem-room-end">ACCESS ENDS</p>
+            <button type="button" className="problem-room-end" onClick={closeFromEnd}>
+              <span>ACCESS ENDS</span>
+              <svg className="problem-room-chevron is-open" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+                <path d="M5 9.5 12 16.5 19 9.5" />
+              </svg>
+            </button>
           </div>
         </section>
       </div>

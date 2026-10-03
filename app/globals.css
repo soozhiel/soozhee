@@ -109,7 +109,8 @@ a { color: inherit; }
 .problem-room-dialogue p { margin: 0 0 1.05em; }
 .problem-room-dialogue p:last-child { margin-bottom: 0; }
 .problem-room-beat { color: var(--muted); font-size: .92em; font-style: italic; }
-.problem-room-end { margin: 2.4rem 0 0; padding-top: 1.8rem; border-top: 1px solid rgb(244 239 229 / .22); color: rgb(214 173 104 / .72); font: 400 .62rem/1.4 var(--sans); letter-spacing: .42em; text-align: center; }
+.problem-room-end { display: flex; align-items: center; justify-content: center; gap: .85rem; width: 100%; margin: 2.4rem 0 0; padding: 1.8rem 0 0; border: 0; border-top: 1px solid rgb(244 239 229 / .22); background: transparent; color: rgb(214 173 104 / .72); font: 400 .62rem/1.4 var(--sans); letter-spacing: .42em; text-align: center; cursor: pointer; }
+.problem-room-end:focus-visible { outline: 1px solid var(--gold); outline-offset: .35rem; }
 
 @media (max-width: 720px) {
   .problem-room { width: calc(100% - 12vw); margin-bottom: 4.5rem; }
