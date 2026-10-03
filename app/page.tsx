@@ -1,3 +1,5 @@
+import { ProblemRoom } from '../components/problem-room';
+
 const lenses = [
   { label: 'Transformative Design', subtitle: 'The mechanics beneath creating change. 2008.', href: 'https://transformative-design.vercel.app' },
   { label: 'Cognitive Clarity', subtitle: 'Protect your mind from sophisticated cognitive warfare.', href: 'https://cognitiveclarity.vercel.app' },
@@ -71,6 +73,8 @@ export default function Home() {
           <p>Because if everything had worked as planned, there’d be very little reason for me to be here.</p>
         </div>
       </article>
+
+      <ProblemRoom />
 
       <section className="directory" aria-label="Where my mind goes">
         <h2 className="directory-lead">WHERE MY MIND GOES</h2>

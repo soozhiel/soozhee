@@ -83,3 +83,47 @@ a { color: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.problem-room { width: min(calc(100% - 12vw), 920px); margin: 0 auto clamp(4.5rem, 8vw, 7rem); border: 1px solid rgb(244 239 229 / .22); }
+.problem-room-toggle { display: flex; align-items: stretch; justify-content: space-between; gap: 1.25rem; width: 100%; margin: 0; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.problem-room-toggle-copy { display: flex; flex-direction: column; align-items: flex-start; gap: .55rem; min-width: 0; padding: 1.45rem 1.15rem 1.5rem 1.45rem; }
+.problem-room-label { font: 400 .66rem/1.35 var(--sans); letter-spacing: .42em; color: var(--gold); }
+.problem-room-glimpse { color: var(--muted); font-size: 1.05rem; font-style: italic; line-height: 1.3; }
+.problem-room-chevron-wrap { display: flex; align-items: center; flex: none; margin: .95rem 0; padding: 0 1.35rem 0 1.2rem; border-left: 1px solid rgb(244 239 229 / .22); color: var(--gold); }
+.problem-room-chevron { display: block; transform: rotate(0deg); transition: transform .35s ease; }
+.problem-room-chevron.is-open { transform: rotate(180deg); }
+.problem-room-toggle:focus-visible { outline: 1px solid var(--gold); outline-offset: -1px; }
+.problem-room-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+.problem-room-panel.is-open { grid-template-rows: 1fr; }
+.problem-room-panel-inner { min-height: 0; overflow: hidden; }
+.problem-room-body { padding: .35rem 1.45rem 2.6rem; }
+.problem-room-kicker { display: flex; align-items: center; gap: .85rem; margin: 1.15rem 0 .7rem; font: 400 .62rem/1.4 var(--sans); letter-spacing: .28em; color: var(--cream); }
+.problem-room-kicker-pipe { color: var(--gold); }
+.problem-room-note { margin: 0 0 1.6rem; color: rgb(244 239 229 / .42); font: 400 .68rem/1.45 var(--sans); letter-spacing: .02em; }
+.problem-room-log { display: flex; flex-direction: column; }
+.problem-room-turn { display: grid; grid-template-columns: 8.25rem minmax(0, 1fr); gap: .35rem 1.75rem; padding: 1.85rem 0; border-top: 1px solid rgb(244 239 229 / .14); }
+.problem-room-speaker { margin: .28rem 0 0; font: 400 .6rem/1.35 var(--sans); letter-spacing: .22em; text-transform: uppercase; }
+.problem-room-speaker.is-ceo { color: var(--gold); }
+.problem-room-speaker.is-soozhee { color: rgb(244 239 229 / .78); }
+.problem-room-dialogue { min-width: 0; color: var(--cream); font-size: 1.08rem; line-height: 1.7; }
+.problem-room-dialogue p { margin: 0 0 1.05em; }
+.problem-room-dialogue p:last-child { margin-bottom: 0; }
+.problem-room-beat { color: var(--muted); font-size: .92em; font-style: italic; }
+.problem-room-end { margin: 2.4rem 0 0; padding-top: 1.8rem; border-top: 1px solid rgb(244 239 229 / .22); color: rgb(214 173 104 / .72); font: 400 .62rem/1.4 var(--sans); letter-spacing: .42em; text-align: center; }
+
+@media (max-width: 720px) {
+  .problem-room { width: calc(100% - 12vw); margin-bottom: 4.5rem; }
+  .problem-room-toggle-copy { gap: .4rem; padding: 1.2rem 1rem 1.25rem 1.15rem; }
+  .problem-room-label { font-size: .56rem; letter-spacing: .28em; }
+  .problem-room-glimpse { font-size: 1rem; }
+  .problem-room-chevron-wrap { margin: .75rem 0; padding: 0 1rem 0 .9rem; }
+  .problem-room-body { padding: .2rem 1.15rem 2.1rem; }
+  .problem-room-kicker { letter-spacing: .18em; }
+  .problem-room-turn { grid-template-columns: 1fr; gap: .45rem; padding: 1.55rem 0; }
+  .problem-room-speaker { margin: 0; }
+  .problem-room-dialogue { font-size: 1rem; line-height: 1.65; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .problem-room-panel, .problem-room-chevron { transition: none; }
+}
