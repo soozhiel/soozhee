@@ -1,14 +1,14 @@
 const lenses = [
-  { label: 'Cognitive Clarity', subtitle: 'The mind beneath the noise.', href: 'https://cognitiveclarity.vercel.app' },
-  { label: 'Economic Clarity', subtitle: 'The incentives beneath the numbers.', href: 'https://economicclarity.vercel.app' },
-  { label: 'Truth vs Facts', subtitle: 'When the facts are right but the picture isn’t.', href: 'https://truthvsfacts.vercel.app' },
+  { label: 'Cognitive Clarity', subtitle: 'Protect your mind from sophisticated cognitive warfare.', href: 'https://cognitiveclarity.vercel.app' },
+  { label: 'Economic Clarity', subtitle: 'Silent leverage. Underlying elite incentives.', href: 'https://economicclarity.vercel.app' },
+  { label: 'Truth vs Facts', subtitle: 'When the facts are right, but omission and rearrangement change the picture.', href: 'https://truthvsfacts.vercel.app' },
   { label: 'Music Secret Science', subtitle: 'Understanding the science of sound.', href: 'https://musicsecretscience.vercel.app' },
   { label: 'Transformative Design', subtitle: 'The mechanics beneath change. 2008.', href: 'https://transformative-design.vercel.app' },
 ];
 
 const creations = [
-  { label: 'Double Dumplings', subtitle: 'Before the next move.', href: 'https://doubledumplings.vercel.app' },
-  { label: 'Sonic Remedy', subtitle: 'Intentional sound for emotional state.', href: 'https://sonicremedy.vercel.app' },
+  { label: 'Double Dumplings', subtitle: 'The blind spot. When everything worked — except the problem still exists.', href: 'https://doubledumplings.vercel.app' },
+  { label: 'Sonic Remedy', subtitle: 'Intentional sound for shifting emotional states', href: 'https://sonicremedy.vercel.app' },
   { label: 'Caelverum Pro-actives™', subtitle: 'Protecting productivity and rewarding effort.', href: 'https://caelverum-proactives.vercel.app' },
   { label: 'InLux Treasures', subtitle: 'A private collection of cultivated value.', href: 'https://inluxtreasures.com' },
 ];
