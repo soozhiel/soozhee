@@ -1,34 +1,42 @@
-const works = [
-  { label: 'Double Dumplings', href: 'https://doubledumplings.vercel.app' },
-  { label: 'Sonic Remedy', href: 'https://sonicremedy.vercel.app' },
-  { label: 'Transformative Design', href: 'https://transformative-design.vercel.app' },
-  {
-    label: 'Caelverum Pro-actives™',
-    href: 'https://caelverum-proactives.vercel.app',
-    children: [
-      { label: 'Candidates', href: 'https://caelverum-proactives.vercel.app/candidates' },
-      { label: 'Sponsors', href: 'https://caelverum-proactives.vercel.app/sponsors' },
-      { label: 'Government', href: 'https://caelverum-proactives.vercel.app/government' },
-    ],
-  },
-  { label: 'Caelverum Archives', href: 'https://caelverum-archives.vercel.app' },
-  { label: 'InLux Treasures', href: 'https://inluxtreasures.com' },
+const lenses = [
+  { label: 'Cognitive Clarity', subtitle: 'The mind beneath the noise.', href: 'https://cognitiveclarity.vercel.app' },
+  { label: 'Economic Clarity', subtitle: 'The incentives beneath the numbers.', href: 'https://economicclarity.vercel.app' },
+  { label: 'Truth vs Facts', subtitle: 'When the facts are right but the picture isn’t.', href: 'https://truthvsfacts.vercel.app' },
+  { label: 'Music Secret Science', subtitle: 'Understanding the science of sound.', href: 'https://musicsecretscience.vercel.app' },
+  { label: 'Transformative Design', subtitle: 'The mechanics beneath change. 2008.', href: 'https://transformative-design.vercel.app' },
 ];
 
-const thoughts = [
-  { label: 'Cognitive Clarity', href: 'https://cognitiveclarity.vercel.app' },
-  { label: 'Economic Clarity', href: 'https://economicclarity.vercel.app' },
-  { label: 'Truth VS Facts', href: 'https://truthvsfacts.vercel.app' },
-  { label: 'Music Secret Science', href: 'https://musicsecretscience.vercel.app' },
+const creations = [
+  { label: 'Double Dumplings', subtitle: 'Before the next move.', href: 'https://doubledumplings.vercel.app' },
+  { label: 'Sonic Remedy', subtitle: 'Intentional sound for emotional state.', href: 'https://sonicremedy.vercel.app' },
+  { label: 'Caelverum Pro-actives™', subtitle: 'Protecting productivity and rewarding effort.', href: 'https://caelverum-proactives.vercel.app' },
+  { label: 'InLux Treasures', subtitle: 'A private collection of cultivated value.', href: 'https://inluxtreasures.com' },
 ];
 
-type IndexLink = { label: string; href: string };
+type MindLink = { label: string; subtitle: string; href: string };
 
-function DirectoryLink({ item }: { item: IndexLink }) {
+function MindRow({ item }: { item: MindLink }) {
   return (
     <a href={item.href} target="_blank" rel="noreferrer">
-      <span>{item.label}</span><span aria-hidden="true">↗︎</span>
+      <span className="mind-copy">
+        <span className="mind-title">{item.label}</span>
+        <span className="mind-subtitle">{item.subtitle}</span>
+      </span>
+      <span className="mind-arrow" aria-hidden="true">↗︎</span>
     </a>
+  );
+}
+
+function MindGroup({ title, items }: { title: string; items: MindLink[] }) {
+  return (
+    <div className="directory-group">
+      <h2>{title}</h2>
+      <ul>
+        {items.map((item) => (
+          <li key={item.label}><MindRow item={item} /></li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -64,27 +72,10 @@ export default function Home() {
         </div>
       </article>
 
-      <section className="directory" aria-label="Soozhee directory">
+      <section className="directory" aria-label="Where my mind goes">
         <h2 className="directory-lead">WHERE MY MIND GOES</h2>
-        <div className="directory-column works-column">
-          <h2>FIXATIONS</h2>
-          <ul>
-            {works.map((item) => (
-              <li key={item.label}>
-                <DirectoryLink item={item} />
-                {item.children && (
-                  <ul className="directory-children">
-                    {item.children.map((child) => <li key={child.label}><DirectoryLink item={child} /></li>)}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="directory-column">
-          <h2>OBSERVATIONS</h2>
-          <ul>{thoughts.map((item) => <li key={item.label}><DirectoryLink item={item} /></li>)}</ul>
-        </div>
+        <MindGroup title="Lens" items={lenses} />
+        <MindGroup title="Creations" items={creations} />
       </section>
 
       <section className="contact-strip" aria-label="Contact">
