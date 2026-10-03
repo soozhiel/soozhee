@@ -1,5 +1,5 @@
 const lenses = [
-  { label: 'Transformative Design', subtitle: 'The mechanics beneath change. 2008.', href: 'https://transformative-design.vercel.app' },
+  { label: 'Transformative Design', subtitle: 'The mechanics beneath creating change. 2008.', href: 'https://transformative-design.vercel.app' },
   { label: 'Cognitive Clarity', subtitle: 'Protect your mind from sophisticated cognitive warfare.', href: 'https://cognitiveclarity.vercel.app' },
   { label: 'Truth vs Facts', subtitle: 'When the facts are right, but omission and rearrangement change the picture.', href: 'https://truthvsfacts.vercel.app' },
   { label: 'Economic Clarity', subtitle: 'Silent leverage. Underlying elite incentives.', href: 'https://economicclarity.vercel.app' },
