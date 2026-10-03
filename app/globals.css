@@ -21,7 +21,7 @@ a { color: inherit; }
 
 .thought { width: min(calc(100% - 12vw), 920px); margin: 0 auto; padding: clamp(6rem, 10vw, 10rem) 0 0; margin-bottom: clamp(9rem, 13vw, 15rem); }
 .eyebrow, .contact-strip h2 { margin: 0; font: 400 .66rem/1.4 var(--sans); letter-spacing: .5em; color: var(--gold); }
-.directory-group h2 { margin: 0; font: 400 clamp(.92rem, 1.25vw, 1.05rem)/1.35 var(--sans); letter-spacing: .38em; color: var(--gold); text-transform: uppercase; }
+.directory-group h2 { margin: 0; font: 400 clamp(1.12rem, 1.55vw, 1.32rem)/1.35 var(--sans); letter-spacing: .3em; color: var(--gold); text-transform: uppercase; }
 .thought > h2 { max-width: 16ch; margin: clamp(1.8rem, 3vw, 2.8rem) 0 clamp(4.2rem, 7vw, 6.5rem); font-size: clamp(2.6rem, 5vw, 4.9rem); font-weight: 400; line-height: 1.02; letter-spacing: -.018em; text-wrap: balance; }
 .thought > h2 span { white-space: nowrap; }
 .thought > h2::after { content: ''; display: block; width: 5rem; height: 1px; margin-top: clamp(2.5rem, 4vw, 4rem); background: var(--gold); }
@@ -72,7 +72,7 @@ a { color: inherit; }
   .directory { width: calc(100% - 12vw); padding: 6.25rem 0 4.5rem; grid-template-columns: 1fr; }
   .directory-lead { margin-bottom: 1.5rem; letter-spacing: .1em; }
   .directory-group + .directory-group { margin-top: 3.4rem; }
-  .directory-group h2 { margin-bottom: 1rem; font-size: .92rem; letter-spacing: .32em; }
+  .directory-group h2 { margin-bottom: 1rem; font-size: 1.12rem; letter-spacing: .32em; }
   .directory a { gap: 1rem; font-size: 1rem; padding: .85rem 0; }
   .mind-arrow { width: 1.55rem; height: 1.55rem; }
 
